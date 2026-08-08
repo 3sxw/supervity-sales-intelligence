@@ -11,7 +11,6 @@ import { Icons } from '@/components/ui/icons'
 import { Button } from '@/components/ui/button'
 import { ChatMessage } from './ChatMessage'
 import { ChatInput } from './ChatInput'
-import { CapabilityBubbles } from './CapabilityBubbles'
 
 // ============================================================================
 // Animation Variants
@@ -144,11 +143,6 @@ export function AIManager() {
       setIsTyping(false)
     }
   }, [addMessage, chatHistory, currentPageContext, setIsTyping])
-
-  // Handle quick action click
-  const handleQuickAction = (action: string) => {
-    handleSendMessage(action)
-  }
 
   // Get page name from context
   const getPageName = () => {
@@ -319,13 +313,8 @@ export function AIManager() {
                       How can I help you?
                     </h3>
                     <p className="mt-2 max-w-sm text-muted-foreground">
-                      Ask me anything about your data, or use a quick action below.
+                      Ask me anything about your data.
                     </p>
-
-                    {/* Quick Actions - Capability Bubbles */}
-                    <div className="mt-8 w-full max-w-lg">
-                      <CapabilityBubbles onSelect={handleQuickAction} />
-                    </div>
                   </div>
                 ) : (
                   /* Chat Messages */

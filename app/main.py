@@ -42,6 +42,12 @@ from .routers import (
     examples_router,
     health_router,
     items_router,
+    ops_agents_router,
+    ops_data_manager_router,
+    ops_insights_router,
+    ops_overview_router,
+    ops_policies_router,
+    ops_workbench_router,
 )
 from .security import get_current_user, verify_access
 
@@ -153,6 +159,14 @@ api_router.include_router(items_router)
 
 # Authorization pattern examples
 api_router.include_router(examples_router)
+
+# Sales Command Center — live Supabase-backed operational data
+api_router.include_router(ops_overview_router)
+api_router.include_router(ops_agents_router)
+api_router.include_router(ops_policies_router)
+api_router.include_router(ops_workbench_router)
+api_router.include_router(ops_insights_router)
+api_router.include_router(ops_data_manager_router)
 
 
 # =============================================================================

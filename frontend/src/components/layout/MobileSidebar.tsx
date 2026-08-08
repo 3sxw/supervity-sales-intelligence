@@ -20,6 +20,15 @@ const navItems = [
     items: [
       { href: '/', label: 'Dashboard', icon: Icons.dashboard },
       { href: '/workbench', label: 'Workbench', icon: Icons.workbench },
+      { href: '/data-manager', label: 'Data Manager', icon: Icons.network },
+    ],
+  },
+  {
+    title: 'AI Intelligence',
+    items: [
+      { href: '/ai/policies', label: 'AI Policies', icon: Icons.brain },
+      { href: '/ai/agents', label: 'Live Agent Activity', icon: Icons.bot },
+      { href: '/ai/insights', label: 'AI Insights', icon: Icons.lightbulb },
     ],
   },
   {
